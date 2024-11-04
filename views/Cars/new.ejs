@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add Cars</title>
+  </head>
+  <body>
+    <h1>Create a New car!</h1>
+    <form action="/cars" method="POST">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <br />
+      <div>
+        <label for="name"> cars Type:</label>
+        <input type="text" name="carsType" id="carsType" />
+      </div>
+      <br />
+      <div>
+        <label for="name">cars Model:</label>
+        <input type="text" name="carsModel" id="carsModel" />
+      </div>
+      <br />
+      <div>
+        <label for="name">Cars Color:</label>
+        <input type="text" name="CarsColor" id="CarsColor" />
+      </div>
+      <br />
+      <div class="checkbox-div">
+        <label for="New-Brand">Brand New?</label>
+        <input type="checkbox" name="NewBrand" id="NewBrand" />
+      </div>
+      <button type="submit">Add Car</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Cars</title>
+</head>
+<body>
+  <h1>Edit <%= cars.name %></h1>
+  <form action="/cars/<%= cars._id %>/?_method=PUT" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%= cars.name %>" id="name" required />
+    </div>
+    <br />
+    <div>
+      <label for="name">Cars Type:</label>
+      <input type="text" name="carsType" value="<%= cars.carsType %>" id="carsType"  />
+    </div>
+    <br />
+    <div>
+      <label for="name">Cars Model:</label>
+      <input type="text" name="carsModel" value="<%= cars.carsModel %>" id="carsModel"  />
+    </div>
+    <br />
+    <div>
+      <label for="name">Cars Color:</label>
+      <input type="text" name="CarsColor" value="<%= cars.CarsColor %>" id="CarsColor" />
+    </div>
+    <br />
+    <div>
+      <label for="New-Brand">Barns New</label>
+      <input type="checkbox" name="NewBrand" id="NewBrand" <%= cars.NewBrand? 'checked':''  %> />
+    </div>
+    <br />
+    <a class="cars-index-link" href="/cars">
+      <div class="index-link-text">Back to Cars</div>
+    </a>
+    <br />
+    <button type="submit">Update Cars</button>
+</body>
+</html>

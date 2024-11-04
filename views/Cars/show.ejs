@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= cars.name %></title>
+  </head>
+  <body>
+    <h1><%= cars.name %></h1>
+    <p>Car Type <%= cars.carsType %></p>
+    <% if(cars.NewBrand){ %>
+    <p>This is a New brand Car!</p>
+    <% } else { %>
+    <p>This is a used Car!</p>
+    <% } %>
+    <!-- new delete button -->
+    <div>
+      <form action="/cars/<%=cars._id%>?_method=DELETE" method="POST">
+        <div>
+          <button type="submit">Delete <%= cars.name %></button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <a href="/cars/<%=cars._id%>/edit">Edit</a>
+    </div>
+    <div>
+      <a href="/cars">Back to Cars</a>
+    </div>
+  </body>
+</html>
